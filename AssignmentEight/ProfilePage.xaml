@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AssignmentEight.ProfilePage"
+             BackgroundColor="#f4f4f9"
+             Title="Profile">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="30" Spacing="20">
+            <!-- Profile Image Section -->
+            <Frame BackgroundColor="#ffffff" Padding="10" CornerRadius="10" HasShadow="True" HorizontalOptions="Center">
+                <Grid>
+                    <Image x:Name="ProfileImage" Source="Resources/Images/profilepic.jpg" Aspect="AspectFill" HeightRequest="150" WidthRequest="150" />
+                </Grid>
+            </Frame>
+
+            <Button Text="Change Picture" BackgroundColor="#007bff" TextColor="White" VerticalOptions="End" HorizontalOptions="Center" Clicked="OnAddPictureClicked" />
+
+            <!-- Input Fields -->
+            <Frame BackgroundColor="#ffffff" Padding="15" CornerRadius="10" HasShadow="True">
+                <VerticalStackLayout Spacing="15">
+                    <Entry x:Name="NameEntry" Placeholder="Name" FontSize="18" />
+                    <Entry x:Name="SurnameEntry" Placeholder="Surname" FontSize="18" />
+                    <Entry x:Name="EmailEntry" Placeholder="Email Address" FontSize="18" Keyboard="Email" />
+                    <Editor x:Name="BioEditor" Placeholder="Bio" AutoSize="TextChanges" FontSize="18" />
+                </VerticalStackLayout>
+            </Frame>
+
+            <!-- Save Button -->
+            <Button Text="Save Profile"
+                    FontSize="18"
+                    BackgroundColor="#007bff"
+                    TextColor="#ffffff"
+                    CornerRadius="10"
+                    HeightRequest="50"
+                    Clicked="SaveButton_Clicked" />
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

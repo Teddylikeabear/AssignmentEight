@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="AssignmentEight.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:AssignmentEight"
+    Shell.FlyoutBehavior="Disabled"
+    Title="AssignmentEight">
+
+    <ShellContent
+        Title="Home"
+        ContentTemplate="{DataTemplate local:ProfilePage}"
+        Route="MainPage" />
+
+</Shell>
